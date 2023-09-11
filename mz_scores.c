@@ -4,6 +4,8 @@
 #include "mz_scores.h"
 
 int **ss70, **ss85, *gop70, *gop85;
+int gap_open, gap_extend;
+int **ss, *gop;
 
 static const uchar nchars[] = "ACGT";
 static const int HOX70[4][4] = {	// for human-rodent
@@ -150,4 +152,3 @@ double mafScoreRange(struct mafAli *maf, int start, int size) {
     }
     return score;
 }
-

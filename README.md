@@ -1,3 +1,29 @@
+# Debug version to avoid compiling failure
+
+## history
+
+> lav2maf.c: line 18: "src1[500], src2[500]" to "src1[800], src2[800]"
+
+```log
+lav2maf.c:170:35: warning: ¡®%s¡¯ directive writing up to 499 bytes into a region of size between 300 and 499
+lav2maf.c:170:35: warning: ¡®%s¡¯ directive writing up to 499 bytes into a region of size between 300 and 499
+```
+
+> mz_scores.h: line 8: "int" to "extern int"
+
+> mz_scores.h: line 11: "int" to "extern int"
+
+> mz_scores.c: line 7: add new line: "int gap_open, gap_extend;"
+
+> mz_scores.c: line 8: add new line: "int **ss, *gop;;"
+
+```
+multiple definition of `ss'
+multiple definition of `gop'
+multiple definition of `gap_open'
+multiple definition of `gap_extend'
+```
+
 # multiz
 DNA multiple sequence aligner, official version from Penn State's Miller Lab
 

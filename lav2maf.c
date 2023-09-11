@@ -15,7 +15,7 @@
 char t1[MAX_ALIGN_LEN], t2[MAX_ALIGN_LEN];
 
 int main(int argc, char **argv) {
-    char buf[500], cmd[500], chr1[500], chr2[500],  name1[200], name2[200], src1[500], src2[500], strand1, strand2, cur_file1[500], cur_file2[500];
+    char buf[500], cmd[500], chr1[500], chr2[500],  name1[200], name2[200], src1[800], src2[800], strand1, strand2, cur_file1[500], cur_file2[500];
     int i, j, k, b1, b2, e1, e2, old_e1, old_e2, len1=-1, len2=-1, dir1,dir2, contig1, contig2;
     int srcSize1, srcSize2, tmp, start1, start2, end1, end2;
     struct mafAli B, *a;
@@ -127,7 +127,7 @@ int main(int argc, char **argv) {
                 fatal("EOF in seq2");
               reversed2 = 0;
               ++cur_contig2;
-            }			 
+            }
             s1 = SEQ_CHARS(sf1) - 1;  // to make seq start at pos 1
             len1 = SEQ_LEN(sf1);
             s2 = SEQ_CHARS(sf2) - 1;
@@ -141,7 +141,7 @@ int main(int argc, char **argv) {
               sf1 = seq_revcomp_inplace(sf1);
               reversed1 = 0;
             }
-              
+
             if ( dir2==1 && reversed2==0) {
               sf2 = seq_revcomp_inplace(sf2);  // the header does not know
               reversed2 = 1;

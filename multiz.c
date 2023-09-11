@@ -1,4 +1,4 @@
-/* multiz.c   version 11.2
+/* multiz.c   version 12.0
  *
  * Change argument row2 to all, make it default not to output
  * single-row blocks. -- 10/06/05
@@ -55,7 +55,7 @@ extern int MIN_OUTPUT_WID;
 extern int LRG_BREAK_WID;
 extern int SML_BREAK_WID;
 
-#define VERSION 11.2
+#define VERSION 12.0
 
 int multiz(struct mafAli** wk_list1, struct mafAli** wk_list2, FILE* fpw1, FILE* fpw2, int v) {
     struct mafAli *a1, *a2, *new_ali;
