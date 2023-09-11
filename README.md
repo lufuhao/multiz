@@ -1,4 +1,20 @@
+# MultiZ
+
+> version 12.0
+
 # Debug version to avoid compiling failure
+
+> I am not professional on C. Please contact me if you're good at it.
+
+## To-do list
+
+- [x] mz_preyama.c free(pointer) at line 348,355,513  [-Wfree-nonheap-object]
+
+- [x] auto_mz.c at line 209 [-Wimplicit-fallthrough=]
+
+- [x] maf_project.c line 570: x [-Wunused-but-set-variable]
+
+- [x] maf_project.c line 567: location  [-Wunused-but-set-variable]
 
 ## history
 
